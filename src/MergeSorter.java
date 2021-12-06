@@ -44,11 +44,11 @@ public class MergeSorter implements IntSorter {
                     rightIndex++;
                 }
             }
-            else if(leftIndex < tempLeftArr.length){
+            else if(leftIndex < tempLeftArr.length){ //lägg över resten av elementetn!
                 a[i] = tempLeftArr[leftIndex];
                 leftIndex++;
             }
-            else if(rightIndex < tempRightArr.length){
+            else if(rightIndex < tempRightArr.length){ //lägg över resten av elementen!
                 a[i] = tempRightArr[rightIndex];
                 rightIndex++;
             }

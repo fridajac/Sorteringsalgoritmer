@@ -43,18 +43,18 @@ public class TestSort {
     }
 
     public static void main(String[] args) {
-        IntSorter intSorter = new InsertionSorter();
+        IntSorter insertionSorter = new InsertionSorter();
         IntSorter mergeSorter = new MergeSorter();
         IntSorter quickSorter = new QuickSorter();
 
         int firstN = 10000;
 
         System.out.println("Unordered:");
-        testSort(mergeSorter, firstN, false);
+        testSort(quickSorter, firstN, false);
         System.out.println("\nOrdered:");
-        testSort(mergeSorter, firstN, true);
+        testSort(quickSorter, firstN, true);
 
-        System.out.println("\n" + mergeSorter.getClass().getName() + ".sort tested ok!");
+        System.out.println("\n" + quickSorter.getClass().getName() + ".sort tested ok!");
         System.exit(0);
     }
 }
