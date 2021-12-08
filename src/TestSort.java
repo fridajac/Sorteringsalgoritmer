@@ -51,11 +51,11 @@ public class TestSort {
         int firstN = 10000;
 
         System.out.println("Unordered:");
-        testSort(mergeSorterOptimized, firstN, false);
+        testSort(quickSorter, firstN, false);
         System.out.println("\nOrdered:");
-        testSort(mergeSorterOptimized, firstN, true);
+        testSort(quickSorter, firstN, true);
 
-        System.out.println("\n" + mergeSorterOptimized.getClass().getName() + ".sort tested ok!");
+        System.out.println("\n" + quickSorter.getClass().getName() + ".sort tested ok!");
         System.exit(0);
     }
 }
