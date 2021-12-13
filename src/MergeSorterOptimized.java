@@ -1,7 +1,5 @@
 package src;
 
-import java.util.Arrays;
-
 public class MergeSorterOptimized implements IntSorter {
 
     public void sort(int[] a){
@@ -11,7 +9,7 @@ public class MergeSorterOptimized implements IntSorter {
     //mergeSort på del av array från lo till hi
     public static void mergeSort(int lo, int hi, int[] a) {
         int mid = 0;
-        int M = 10;
+        int M = 70;
         if(hi > lo) { //om vi har fler än 1 element
             if(hi-lo <= M) { //om vi delarray av en viss storlek M
                 insertionSort(lo, hi, a);

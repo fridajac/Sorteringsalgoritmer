@@ -48,8 +48,9 @@ public class TestSort {
         IntSorter quickSorter = new QuickSorter();
         IntSorter quickSorterOptimized = new QuicksorterOptimized();
         IntSorter mergeSorterOptimized = new MergeSorterOptimized();
+        IntSorter threeMapSorter = new TreeMapSorter();
 
-        int firstN = 10000;
+        int firstN = 100000;
 
         System.out.println("Unordered:");
         testSort(quickSorterOptimized, firstN, false);
