@@ -4,7 +4,7 @@ import java.util.TreeMap;
 
 class TreeMapSorter implements IntSorter {
 
-    public void sort(int[] a){
+    public void sort(int[] a) {
         ThreeMapSort(a);
     }
 
@@ -22,7 +22,7 @@ class TreeMapSorter implements IntSorter {
             }
         }
         for (var p : d.entrySet()) {
-            for(int i = 0; i < p.getValue(); i++) {
+            for (int i = 0; i < p.getValue(); i++) {
                 a[count++] = p.getKey();
             }
         }

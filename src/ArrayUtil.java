@@ -8,8 +8,10 @@ public class ArrayUtil {
         int N = a.length;
         Random randomGenerator = new Random();
         for (int i = 0; i < N; i++) {
-            int r = i + randomGenerator.nextInt(N-i);     // between i and N-1
-            int t = a[i]; a[i] = a[r]; a[r] = t;
+            int r = i + randomGenerator.nextInt(N - i);     // between i and N-1
+            int t = a[i];
+            a[i] = a[r];
+            a[r] = t;
         }
     }
 
@@ -30,15 +32,19 @@ public class ArrayUtil {
     }
 
     public static class SortingException extends RuntimeException {
-        public SortingException(String message) { super(message); }
+        public SortingException(String message) {
+            super(message);
+        }
     }
 
-    /** Throws src.ArrayUtil.SortingException if a is not sorted. */
+    /**
+     * Throws src.ArrayUtil.SortingException if a is not sorted.
+     */
     public static void testOrdered(int[] a) {
         int N = a.length;
         for (int i = 1; i < N; i++) {
-            if (a[i] < a[i-1]) {
-                throw new SortingException("Not sorted, a["+(i-1)+"] > a["+i+"]");
+            if (a[i] < a[i - 1]) {
+                throw new SortingException("Not sorted, a[" + (i - 1) + "] > a[" + i + "]");
             }
         }
     }
