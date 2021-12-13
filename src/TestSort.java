@@ -1,10 +1,5 @@
 package src;
 
-import src.InsertionSorter;
-import src.IntSorter;
-import src.MergeSorter;
-import src.QuickSorter;
-
 public class TestSort {
 
     private static int[] create(int N, boolean ordered) {
@@ -46,7 +41,7 @@ public class TestSort {
         IntSorter insertionSorter = new InsertionSorter();
         IntSorter mergeSorter = new MergeSorter();
         IntSorter quickSorter = new QuickSorter();
-        IntSorter quickSorterOptimized = new QuicksorterOptimized();
+        IntSorter quickSorterOptimized = new QuickSorterOptimized();
         IntSorter mergeSorterOptimized = new MergeSorterOptimized();
         IntSorter threeMapSorter = new TreeMapSorter();
 
