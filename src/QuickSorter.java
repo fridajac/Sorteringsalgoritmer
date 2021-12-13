@@ -15,7 +15,6 @@ public class QuickSorter implements IntSorter {
     }
 
     static int partition(int[] arr, int low, int high) {
-
         int pivot = arr[high];
         int i = (low - 1);
 
