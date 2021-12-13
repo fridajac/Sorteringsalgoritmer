@@ -36,9 +36,9 @@ public class QuickSorterOptimized implements IntSorter {
 
             }
             else {
-                int partitioningindex = partition(arr, low, high);
-                quickSort(arr, low, partitioningindex - 1);
-                quickSort(arr, partitioningindex + 1, high);
+                int partitioningIndex = partition(arr, low, high);
+                quickSort(arr, low, partitioningIndex - 1);
+                quickSort(arr, partitioningIndex + 1, high);
             }
         }
     }

@@ -4,27 +4,23 @@ public class QuickSorter implements IntSorter {
 
     public void sort(int[] a) {
         ArrayUtil.shuffle(a); //skapa array och blanda om den
-        int N = a.length-1; // N är lika med arrayens längd -1
+        int N = a.length - 1; // N är lika med arrayens längd -1
         quickSort(a, 0, N);// skicka till metoden quicksort, låg 0, hög N(högsta talet) och arrayen.
     }
 
-    static void swap(int[] arr, int i, int j)
-    {
+    static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 
-    static int partition(int[] arr, int low, int high)
-    {
+    static int partition(int[] arr, int low, int high) {
 
         int pivot = arr[high];
         int i = (low - 1);
 
-        for(int j = low; j <= high; j++)
-        {
-            if (arr[j] < pivot)
-            {
+        for (int j = low; j <= high; j++) {
+            if (arr[j] < pivot) {
                 i++; // Increment index of  smaller element
                 swap(arr, i, j);
             }
@@ -33,15 +29,11 @@ public class QuickSorter implements IntSorter {
         return (i + 1);
     }
 
-    static void quickSort(int[] arr, int low, int high)
-    {
-        if (low < high)
-        {
-
-            int partitioningindex = partition(arr, low, high);
-
-            quickSort(arr, low, partitioningindex - 1);
-            quickSort(arr, partitioningindex + 1, high);
+    static void quickSort(int[] arr, int low, int high) {
+        if (low < high) {
+            int partitioningIndex = partition(arr, low, high);
+            quickSort(arr, low, partitioningIndex - 1);
+            quickSort(arr, partitioningIndex + 1, high);
         }
     }
 }
